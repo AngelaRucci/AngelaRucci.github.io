@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #00205B;
+          color: white;
+          text-align: center;
+          margin-top: 60px;
+        }
+        </style>
+</head>
+<body>
+    <h2>
+        Just Kidding.. </br>
+        NFTs are a Ponzi Scheme
+    </h2>
+
+    <h2>
+        Here are two tickets to a Cunucks game instead!
+    </h2>
+
+    <h2>Redirecting you in <span id="timerEl">20</span>s</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Vancouver_Canucks_logo.svg/1200px-Vancouver_Canucks_logo.svg.png" width="100px">
+</body>
+<script>
+    let timeElm = document.getElementById('timerEl');
+let timer = function(x) {
+ if(x === 0) {
+    location.assign('https://tickets.canucks.com/singlegame');
+ }
+
+ timeElm.innerHTML = x;
+
+ return setTimeout(() => {timer(--x)}, 1000)
+}
+
+timer(20);
+</script>
